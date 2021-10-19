@@ -1,0 +1,49 @@
+.greetings {
+    color: #F2F9FD;
+    overflow-x: hidden;
+}
+
+.g-bg-1 {
+    background-color: #04AAF5;
+}
+.g-bg-2 {
+    background-color: #08A0E4;
+}
+.g-bg-3 {
+    background-color: #0994D2;
+}
+.g-bg-4 {
+    background-color: #008ED1;
+}
+
+.greetings h6 {
+    font-size: 20px;
+}
+
+.custom-text {
+    color: #03A9F4;
+}
+.heading {
+    color: #272F87;
+}
+.custom-border {
+    position: relative;
+}
+.custom-border::before {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 4px;
+    width: 80px;
+    background: #EAEAEA;
+    content: "";
+}
+.custom-border::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 4px;
+    width: 40px;
+    background: #03A9F4;
+    content: "";
+}

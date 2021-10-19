@@ -1,13 +1,14 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Footer from '../../Shared/Footer/Footer';
+import Greetings from '../Greetings/Greetings';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
         <div id="home">
             <Banner></Banner>
-            <Footer></Footer>
-
+            <Greetings></Greetings>
+            <Services></Services>
         </div>
     );
 };

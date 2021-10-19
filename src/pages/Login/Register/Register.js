@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
-    const { signInUsingGoogle, signInUsingFb, user, getEmail, getPassword, signInUsingPassword } = useAuth();
+    const { signInUsingGoogle, signInUsingFb, error, getEmail, getPassword, signInUsingPassword } = useAuth();
 
 
     return (
@@ -19,6 +19,7 @@ const Register = () => {
                                     <form onSubmit={signInUsingPassword}>
                                         <input onBlur={getEmail} type="email" name="" placeholder="Type your Email" required />
                                         <input onBlur={getPassword} type="password" name="" placeholder="Type your password" required />
+                                        <div className="text-danger">{error}</div>
                                         {/* <input onBlur={getPassword} type="password" name="" placeholder="Re-enter your password" required /> */}
                                         <input className="bg-primary text-white fw-bold" type="submit" value="Sign up" />
                                     </form>

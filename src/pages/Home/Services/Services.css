@@ -1,0 +1,11 @@
+.custom-border {
+    display: inline-block;
+}
+.services .custom-border::before {
+    left: 50%;
+    margin-left: -40px;
+}
+.services .custom-border::after {
+    left: 50%;
+    margin-left: -40px;
+}

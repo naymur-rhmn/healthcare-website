@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
-    const { signInUsingGoogle, signInUsingFb, user } = useAuth();
+    const { signInUsingGoogle, signInUsingFb, getEmail, getPassword, logInWithEmailPassword, error } = useAuth();
     return (
         <div className="login-container p-5">
             <div className="container">
@@ -15,9 +15,10 @@ const Login = () => {
                                 <div className="p-5">
                                     <h2>Log in to Dental Care.</h2>
                                     <p className="mb-5">Enter your details below.</p>
-                                    <form>
-                                        <input type="email" name="" id="" placeholder="Type your Email" required />
-                                        <input type="password" name="" id="" placeholder="Type your password" required />
+                                    <form onSubmit={logInWithEmailPassword}>
+                                        <input onBlur={getEmail} type="email" name="email" placeholder="Type your Email" required />
+                                        <input onBlur={getPassword} type="password" name="password" placeholder="Type your password" required />
+                                        <div className="text-danger">{error}</div>
                                         <input className="bg-primary text-white fw-bold" type="submit" value="Login" />
                                     </form>
                                     <div className="text-center">

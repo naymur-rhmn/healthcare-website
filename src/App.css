@@ -1,3 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+.spinner {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

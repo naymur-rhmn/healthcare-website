@@ -1,0 +1,7 @@
+.single-service:hover {
+    box-shadow: 0px 0px 20px lightblue;
+    transition: .3s;
+}
+.subtitle {
+    color: rgb(44, 51, 58);
+}

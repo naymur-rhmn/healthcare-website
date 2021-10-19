@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Map = () => {
+const NotFound = () => {
     return (
         <div>
-            hello
+            not available
         </div>
     );
 };
 
-export default Map;
+export default NotFound;

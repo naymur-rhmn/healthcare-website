@@ -2,8 +2,6 @@ import React from 'react';
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faEnvelope, faPhone, faFax } from '@fortawesome/free-solid-svg-icons'
-import Map from '../../Shared/Map/Map'
-import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const envelope = <FontAwesomeIcon icon={faEnvelope} />
@@ -63,7 +61,6 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <Map></Map>
                         </div>
                         <div className="col-lg-3 text-white">
                             <h5>CONTACTS</h5>
