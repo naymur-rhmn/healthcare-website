@@ -1,0 +1,32 @@
+.banner {
+    background-image: url(https://i.ibb.co/WBK0g55/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+.banner-content h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+.banner-content p {
+    font-size: 18px;
+}
+.boxed-btn {
+    border: none;
+    padding: 10px 18px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #1788bd;
+    font-weight: 600;
+    
+}
+.boxed-btn:hover {
+    background-color: #1960a3;
+}
+.boxed-btn:last-child {
+    background-color: #0087AA;
+}
+.boxed-btn:last-child:hover {
+    background-color: #00283C;
+}
