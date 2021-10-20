@@ -1,10 +1,13 @@
 import React from 'react';
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const { signInUsingGoogle, signInUsingFb, getEmail, getPassword, logInWithEmailPassword, error } = useAuth();
+
+    const location = useLocation();
+    console.log(location.state?.from);
     return (
         <div className="login-container p-lg-5 p-md-5 p-0 py-5">
             <div className="container">

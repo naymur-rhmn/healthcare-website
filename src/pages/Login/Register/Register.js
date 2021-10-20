@@ -5,7 +5,6 @@ import useAuth from '../../../hooks/useAuth';
 const Register = () => {
     const { signInUsingGoogle, signInUsingFb, error, getEmail, getPassword, signInUsingPassword, getName } = useAuth();
 
-
     return (
         <div className="login-container p-lg-5 p-md-5 p-0 py-5">
             <div className="container">
