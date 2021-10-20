@@ -3,20 +3,21 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
-    const { signInUsingGoogle, signInUsingFb, error, getEmail, getPassword, signInUsingPassword } = useAuth();
+    const { signInUsingGoogle, signInUsingFb, error, getEmail, getPassword, signInUsingPassword, getName } = useAuth();
 
 
     return (
-        <div className="login-container p-5">
+        <div className="login-container p-lg-5 p-md-5 p-0 py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-10 col-md-8 col-10 mx-auto shadow">
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="p-5">
+                                <div className="p-lg-5 p-md-5 p-0">
                                     <h2>Register in to Dental Care.</h2>
                                     <p className="mb-5">Enter your details below.</p>
                                     <form onSubmit={signInUsingPassword}>
+                                        <input onBlur={getName} type="text" name="" placeholder="Type your Name" required />
                                         <input onBlur={getEmail} type="email" name="" placeholder="Type your Email" required />
                                         <input onBlur={getPassword} type="password" name="" placeholder="Type your password" required />
                                         <div className="text-danger">{error}</div>
@@ -25,7 +26,7 @@ const Register = () => {
                                     </form>
                                     <div className="text-center">
                                         <p>Or sign up with</p>
-                                        <button onClick={signInUsingFb} className="btn btn-outline-primary fs-5 mb-2 me-1"><i className="fab fa-facebook-square"></i> Facebook</button>
+                                        {/* <button onClick={signInUsingFb} className="btn btn-outline-primary fs-5 mb-2 me-1"><i className="fab fa-facebook-square"></i> Facebook</button> */}
                                         <button onClick={signInUsingGoogle} className="btn btn-outline-danger fs-5 mb-2 ms-1 me-1"><i className="fab fa-google-plus-g"></i> Google</button>
                                         <p className="mt-5">Already have an account? <Link to="/login">Login</Link></p>
                                     </div>

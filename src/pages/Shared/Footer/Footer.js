@@ -1,12 +1,14 @@
 import React from 'react';
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEnvelope, faPhone, faFax } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faFax, } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+
 
 const envelope = <FontAwesomeIcon icon={faEnvelope} />
 const phone = <FontAwesomeIcon icon={faPhone} />
 const fax = <FontAwesomeIcon icon={faFax} />
+
 
 const Footer = () => {
     return (
@@ -19,7 +21,7 @@ const Footer = () => {
                             <h2 className="m-0">Together we will cure teeth</h2>
                         </div>
                         <div className="col-lg-4 col-12 text-center text-lg-end text-md-center">
-                            <button className="gradient-btn">Book an appoinment</button>
+                            <Link to="/contact"><button className="gradient-btn">Book an appoinment</button></Link>
                         </div>
                     </div>
                 </div>
@@ -28,7 +30,7 @@ const Footer = () => {
             <div className="footer-middle">
                 <div className="container">
                     <div className="row py-5">
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-4 col-md-6">
                             <h5>OPEN HOURS</h5>
                             <div className="opening card text-dark p-3 mt-4">
                                 <div className="row">
@@ -38,18 +40,18 @@ const Footer = () => {
                                             <small>08:00 am - 05:00 pm</small>
                                         </div>
                                         <div className="mb-3">
-                                            <h6 className="m-0">Monday</h6>
+                                            <h6 className="m-0">Tuesday</h6>
                                             <small>08:00 am - 05:00 pm</small>
                                         </div>
                                         <div className="mb-3">
-                                            <h6 className="m-0">Friday</h6>
-                                            <small>08:00 am - 05:00 pm</small>
+                                            <h6 className="m-0">Wensday</h6>
+                                            <small>10:00 am - 05:00 pm</small>
                                         </div>
                                     </div>
                                     <div className="col-6">
 
                                         <div className="mb-3">
-                                            <h6 className="m-0">Friday</h6>
+                                            <h6 className="m-0">Thursday</h6>
                                             <small>08:00 am - 05:00 pm</small>
                                         </div>
                                         <div className="mb-3">
@@ -60,9 +62,18 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-4 col-md-6 mt-sm-5 mt-4 mt-md-0">
+                            <h5>ABOUT US</h5>
+                            <div className="mt-3">
+                                <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound.</p>
+                                <p>We all together are vary consious about our cmmunity and health</p>
+                            </div>
+
+                            <div className="social-icon">
+
+                            </div>
                         </div>
-                        <div className="col-lg-3 text-white">
+                        <div className="col-lg-4 text-white mt-sm-4 mt-4 mt-md-0 mt-lg-0">
                             <h5>CONTACTS</h5>
                             <div className="contacts mt-3">
                                 <div className="row">
@@ -83,10 +94,8 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8">
-                            <Link to="/home#home">
-                                Home
-                            </Link>
+                        <div className="col p-3">
+                            <small className="text-secondary">Copyright &copy; 2021 Dental Care. All Rights Reserved.</small>
                         </div>
                     </div>
                 </div>

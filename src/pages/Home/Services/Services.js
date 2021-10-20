@@ -12,7 +12,7 @@ const Services = () => {
     }, [])
 
     return (
-        <div className="services py-5">
+        <div id="services" className="services py-5">
             <div className="container">
                 <div className="row mb-5">
                     <div className="col-lg-8 mx-auto">

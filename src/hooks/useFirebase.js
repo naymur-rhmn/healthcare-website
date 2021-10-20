@@ -1,10 +1,11 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../pages/Login/firebase/firebase.init";
 
 initializeAuthentication();
 
 const useFirebase = () => {
+    const [name, setName] = useState('');
     const [user, setUser] = useState({});
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,12 +14,16 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
+
+    // get user name
+    const getName = e => {
+        setName(e.target.value);
+    }
     // get email
     const getEmail = (e) => {
         const email = e.target.value;
         setEmail(email);
     }
-
     // get password
     const getPassword = (e) => {
         const password = e.target.value;
@@ -26,9 +31,16 @@ const useFirebase = () => {
         setError('')
     }
 
+    // set user name
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
+    }
+
     // authenticate using password
     const signInUsingPassword = (e) => {
         e.preventDefault();
+        // error handle
         if (password.length < 6) {
             setError('Password Must be at least 6 characters')
             return;
@@ -36,7 +48,7 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user)
-                console.log(result.user);
+                setUserName();
             })
             .catch(error => {
                 console.log(error.message);
@@ -74,7 +86,6 @@ const useFirebase = () => {
 
     // authenticate using facebook
     const signInUsingFb = () => {
-
         const fbProvider = new FacebookAuthProvider();
         signInWithPopup(auth, fbProvider)
             .then(result => {
@@ -118,6 +129,7 @@ const useFirebase = () => {
         user,
         error,
         logOut,
+        getName,
         getEmail,
         isLoading,
         getPassword,

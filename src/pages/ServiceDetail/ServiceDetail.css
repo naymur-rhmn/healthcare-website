@@ -1,0 +1,8 @@
+.service-d-bg {
+    background-image: url('https://wakeorthopedo.com/wp-content/uploads/2016/05/Screen-Shot-2016-05-13-at-5.28.17-PM.png');
+    height: 300px;
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

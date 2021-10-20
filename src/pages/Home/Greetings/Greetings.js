@@ -6,19 +6,19 @@ const Greetings = () => {
     return (
         <div className="greetings text-center">
             <div className="row">
-                <div className="col-lg-3 g-bg-1 py-5 px-4 col-12">
+                <div className="col-lg-3 g-bg-1 py-5 px-4 col-12 single-gretings">
                     <h6>Root Canals</h6>
                     <p>Our root canal procedures are very afforfdable prices from $200.</p>
                 </div>
-                <div className="col-lg-3 g-bg-2 py-5 px-4  col-12">
+                <div className="col-lg-3 g-bg-2 py-5 px-4  col-12  single-gretings">
                     <h6>Routine Check-ups</h6>
                     <p>Comprehensive dentel check-ups for both children and adults.</p>
                 </div>
-                <div className="col-lg-3 g-bg-3 py-5 px-4  col-12">
+                <div className="col-lg-3 g-bg-3 py-5 px-4  col-12 single-gretings">
                     <h6>Teeth Whitening</h6>
                     <p>High quality teeth whitening products and treatments.</p>
                 </div>
-                <div className="col-lg-3  g-bg-4 py-5 px-4 col-12">
+                <div className="col-lg-3  g-bg-4 py-5 px-4 col-12 single-gretings">
                     <h6>Consult Out Dentist</h6>
                     <p>Comprehensive dentel check-ups for both children and adults.</p>
                 </div>

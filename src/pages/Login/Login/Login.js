@@ -6,13 +6,13 @@ import useAuth from '../../../hooks/useAuth';
 const Login = () => {
     const { signInUsingGoogle, signInUsingFb, getEmail, getPassword, logInWithEmailPassword, error } = useAuth();
     return (
-        <div className="login-container p-5">
+        <div className="login-container p-lg-5 p-md-5 p-0 py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-10 col-md-8 col-10 mx-auto shadow">
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="p-5">
+                                <div className="p-lg-5 p-md-5 p-0">
                                     <h2>Log in to Dental Care.</h2>
                                     <p className="mb-5">Enter your details below.</p>
                                     <form onSubmit={logInWithEmailPassword}>
@@ -23,7 +23,7 @@ const Login = () => {
                                     </form>
                                     <div className="text-center">
                                         <p>Or login with</p>
-                                        <button onClick={signInUsingFb} className="btn btn-outline-primary fs-5 mb-2 me-1"><i className="fab fa-facebook-square"></i> Facebook</button>
+                                        {/* <button onClick={signInUsingFb} className="btn btn-outline-primary fs-5 mb-2 me-1"><i className="fab fa-facebook-square"></i> Facebook</button> */}
                                         <button onClick={signInUsingGoogle} className="btn btn-outline-danger fs-5 mb-2 ms-1 me-1"><i className="fab fa-google-plus-g"></i> Google</button>
                                         <p className="mt-5">Not a member? <Link to="/register">Sign up now</Link></p>
                                     </div>

@@ -18,7 +18,10 @@
     color: aliceblue;
     font-size: 18px;
 }
-
+.gradient-btn:hover {
+    opacity: .9;
+    transition: .3s;
+}
 .contacts span {
     color: #0ECBF5;
 }

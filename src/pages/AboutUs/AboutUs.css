@@ -1,0 +1,44 @@
+.sort-info {
+    background-color: #2C4CA5;
+    color: #ced3e0;
+}
+hr {
+    background-color: #48CCED !important;
+}
+.about-h2 {
+    color: #303030;
+    position: relative;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.about-h2::after {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    content: "";
+    background-color: #209FD6;
+    height: 3px;
+    width: 80px;
+}
+.about-btn {
+    background-color: #209FD6;
+    color: #fafbfc;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+.about-btn:hover {
+    background-color: #2C4CA5;
+    color: #fafbfc;
+}
+.bs button {
+    cursor: pointer;
+    color: #2C4CA5;
+}
+.bs button:hover {
+    color: #31D2F2;
+}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
