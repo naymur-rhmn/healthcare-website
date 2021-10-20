@@ -1,13 +1,18 @@
 import React from 'react';
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone, faFax, } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faFax } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookSquare, faTwitter, faGooglePlus, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
 
 
 const envelope = <FontAwesomeIcon icon={faEnvelope} />
 const phone = <FontAwesomeIcon icon={faPhone} />
 const fax = <FontAwesomeIcon icon={faFax} />
+const fb = <FontAwesomeIcon icon={faFacebookSquare} />
+const twitter = <FontAwesomeIcon icon={faTwitter} />
+const googelPlus = <FontAwesomeIcon icon={faGooglePlus} />
+const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />
 
 
 const Footer = () => {
@@ -69,8 +74,11 @@ const Footer = () => {
                                 <p>We all together are vary consious about our cmmunity and health</p>
                             </div>
 
-                            <div className="social-icon">
-
+                            <div className="social-icon mt-3">
+                                <span className="fs-3 me-4">{fb}</span>
+                                <span className="fs-3 me-4">{twitter}</span>
+                                <span className="fs-3 me-4">{googelPlus}</span>
+                                <span className="fs-3 me-4">{linkedin}</span>
                             </div>
                         </div>
                         <div className="col-lg-4 text-white mt-sm-4 mt-4 mt-md-0 mt-lg-0">

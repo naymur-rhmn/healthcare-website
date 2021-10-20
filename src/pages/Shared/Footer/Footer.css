@@ -25,3 +25,6 @@
 .contacts span {
     color: #0ECBF5;
 }
+.social-icon span {
+    cursor: pointer;
+}
